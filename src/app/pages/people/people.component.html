@@ -1,0 +1,136 @@
+<app-menu></app-menu>
+
+<div class="container">
+  <div class="card top">
+    <p class="txtCenter txtTop">Name: {{peoples.name}}</p>
+    <p class="txtCenter">Birth Year: {{peoples.birth_year}}</p>
+    <p class="txtCenter">Gender: {{peoples.gender}}</p>
+    <p class="txtCenter">Height: {{peoples.height}}</p>
+  </div>
+</div>
+
+
+<div class="container top">
+  <div class="card" *ngIf="films.length != 0">
+    <h5 class="txtCenter">Films</h5>
+  </div>
+</div>
+
+<div class="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm top left" *ngFor="let film of films">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="../../../assets/img/starWars.jpg">
+          <div class="card-body">
+            <h5 class="card-title txtCenter txtCenter">{{film.title}} - Episode: {{film.episode_id}}</h5>
+            <div align="center">
+              <button type="button" class="btn btn-outline-dark" (click)="getFilm(film.url)"
+                routerLink="/pages/films">Detalhes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container top">
+  <div class="card" *ngIf="planets.length != 0">
+    <h5 class="txtCenter">Planets</h5>
+  </div>
+</div>
+
+<div class="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm top left" *ngFor="let planet of planets">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="../../../assets/img/planets.jpeg">
+          <div class="card-body">
+            <h5 class="card-title txtCenter">{{planet.name}}</h5>
+            <div align="center">
+              <button type="button" class="btn btn-outline-dark" (click)="getPlanet(planet.url)"
+                routerLink="/pages/planets">Detalhes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container top">
+  <div class="card" *ngIf="species.length != 0">
+    <h5 class="txtCenter">Species</h5>
+  </div>
+</div>
+
+<div class="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm top left" *ngFor="let specie of species">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="../../../assets/img/species.jpg">
+          <div class="card-body">
+            <h5 class="card-title txtCenter">{{specie.name}}</h5>
+            <div align="center">
+              <button type="button" class="btn btn-outline-dark" (click)="getSpecie(specie.url)"
+                routerLink="/pages/species">Detalhes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container top">
+  <div class="card" *ngIf="starships.length != 0">
+    <h5 class="txtCenter">Starships</h5>
+  </div>
+</div>
+
+<div class="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm top left" *ngFor="let starship of starships">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="../../../assets/img/starships.jpg">
+          <div class="card-body">
+            <h5 class="card-title txtCenter">{{starship.name}}</h5>
+            <div align="center">
+              <button type="button" class="btn btn-outline-dark" (click)="getStarShip(starship.url)"
+                routerLink="/pages/starships">Detalhes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container top">
+  <div class="card" *ngIf="vehicles.length != 0">
+    <h5 class="txtCenter">Vehicles</h5>
+  </div>
+</div>
+
+<div class="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm top left" *ngFor="let vehicle of vehicles">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="../../../assets/img/vehicles.jpg">
+          <div class="card-body">
+            <h5 class="card-title txtCenter">{{vehicle.name}}</h5>
+            <div align="center">
+              <button type="button" class="btn btn-outline-dark" (click)="getVehicle(vehicle.url)"
+                routerLink="/pages/vehicles">Detalhes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

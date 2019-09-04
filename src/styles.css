@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body {
+    background-image: url('./assets/img/fundo.png');
+}
+
+.top {
+    margin-top: 3%;
+}
+
+.txtTop{
+    margin-top: 1.5%;
+}
+
+.txtCenter{
+    text-align: center;
+}
+
+.left {
+    margin-left: 3%;
+}
+
+.txtAling {
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+ 
+a:hover {
+    color: black;
+}
+ 
+a:active {
+    color: black;
+}

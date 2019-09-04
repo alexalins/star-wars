@@ -1,0 +1,87 @@
+<app-menu></app-menu>
+
+<div class="container">
+  <div class="card top">
+    <p class="txtCenter txtTop">Name: {{species.name}}</p>
+    <p class="txtCenter">Language: {{species.language}}</p>
+    <p class="txtCenter">Classification: {{species.classification}}</p>
+    <p class="txtCenter">Skin Colors: {{species.skin_colors}}</p>
+    <p class="txtCenter">Hair Colors: {{species.hair_colors}}</p>
+    <p class="txtCenter">Eye Colors: {{species.eye_colors}}</p>
+  </div>
+</div>
+
+<div class="container top">
+  <div class="card" *ngIf="planet != null">
+    <h5 class="txtCenter">Planet</h5>
+  </div>
+</div>
+
+<div class="top" *ngIf="planet != null">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="../../../assets/img/planets.jpeg">
+          <div class="card-body">
+            <h5 class="card-title txtCenter">{{planet.name}}</h5>
+            <div align="center">
+              <button type="button" class="btn btn-outline-dark" (click)="getPlanet(planet.url)"
+                routerLink="/pages/planets">Detalhes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container top">
+  <div class="card" *ngIf="films.length != 0">
+    <h5 class="txtCenter">Films</h5>
+  </div>
+</div>
+
+<div class="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm top left" *ngFor="let film of films">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="../../../assets/img/starWars.jpg">
+          <div class="card-body">
+            <h5 class="card-title txtCenter txtCenter">{{film.title}} - Episode: {{film.episode_id}}</h5>
+            <div align="center">
+              <button type="button" class="btn btn-outline-dark" (click)="getFilm(film.url)"
+                routerLink="/pages/films">Detalhes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container top">
+  <div class="card" *ngIf="peoples.length != 0">
+    <h5 class="txtCenter">Peoples</h5>
+  </div>
+</div>
+
+<div class="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm top left" *ngFor="let people of peoples">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="../../../assets/img/people.jpg">
+          <div class="card-body">
+            <h5 class="card-title txtCenter">{{people.name}}</h5>
+            <div align="center">
+              <button type="button" class="btn btn-outline-dark" (click)="getPeople(people.url)"
+                routerLink="/pages/people">Detalhes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

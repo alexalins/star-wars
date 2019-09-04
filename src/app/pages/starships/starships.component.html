@@ -1,0 +1,62 @@
+<app-menu></app-menu>
+
+<div class="container">
+  <div class="card top">
+    <p class="txtCenter txtTop">Name: {{starships.name}}</p>
+    <p class="txtCenter">Model: {{starships.model}}</p>
+    <p class="txtCenter">Manufacturer: {{starships.manufacturer}}</p>
+    <p class="txtCenter">Length: {{starships.length}}</p>
+    <p class="txtCenter">Passengers: {{starships.passengers}}</p>
+    <p class="txtCenter">Starship Class: {{starships.starship_class}}</p>
+  </div>
+</div>
+
+<div class="container top">
+  <div class="card" *ngIf="peoples.length != 0">
+    <h5 class="txtCenter">Pilots</h5>
+  </div>
+</div>
+
+<div class="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm top left" *ngFor="let people of peoples">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="../../../assets/img/people.jpg">
+          <div class="card-body">
+            <h5 class="card-title txtCenter txtCenter">{{people.name}}</h5>
+            <div align="center">
+              <button type="button" class="btn btn-outline-dark" (click)="getPeople(people.url)"
+                routerLink="/pages/people">Detalhes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container top">
+    <div class="card" *ngIf="films.length != 0">
+      <h5 class="txtCenter">Films</h5>
+    </div>
+  </div>
+  
+  <div class="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm top left" *ngFor="let film of films">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="../../../assets/img/starWars.jpg">
+            <div class="card-body">
+              <h5 class="card-title txtCenter txtCenter">{{film.title}} - Episode: {{film.episode_id}}</h5>
+              <div align="center">
+                <button type="button" class="btn btn-outline-dark" (click)="getFilm(film.url)"
+                  routerLink="/pages/films">Detalhes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
